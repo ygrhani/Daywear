@@ -16,10 +16,10 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var warnLabel: UILabel!
-    @IBOutlet weak var appNameLbl: UILabel!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var signInBtn: UIButton!
-    
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var appNameLbl: UILabel!
     
     var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle!
     
@@ -28,8 +28,11 @@ final class LoginViewController: UIViewController {
         
         //#colorLiteral()
         
-        view.backgroundColor = #colorLiteral(red: 0.9905706048, green: 0.7712565817, blue: 0.732809884, alpha: 1)
-        appNameLbl.text = "DayWear \n     App"
+        view.backgroundColor = #colorLiteral(red: 0.9905706048, green: 0.8760409168, blue: 0.6444740729, alpha: 1)
+        backgroundView.backgroundColor = #colorLiteral(red: 0.8966694327, green: 0.7454180396, blue: 0.5850306072, alpha: 1)
+        backgroundView.alpha = 0.6
+        backgroundView.layer.cornerRadius = 30
+        appNameLbl.text = "DayWear \nApp"
         appNameLbl.layer.borderColor = UIColor.purple.cgColor
         warnLabel.text = "Error"
         warnLabel.textColor = .red
