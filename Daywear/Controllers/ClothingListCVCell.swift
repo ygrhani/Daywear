@@ -13,6 +13,8 @@ class ClothingListCVCell: UICollectionViewCell {
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
     
+    view?.layer.cornerRadius = 25
+    
     var menuCategory: ClothingList? {
         didSet {
             categoryName.text = menuCategory?.title

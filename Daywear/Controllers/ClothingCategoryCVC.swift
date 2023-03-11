@@ -1,40 +1,20 @@
 //
-//  ClothingListCVC.swift
+//  ClothingCategoryCVC.swift
 //  Daywear
 //
-//  Created by Ann Prudnikova on 27.02.23.
+//  Created by Ann Prudnikova on 12.03.23.
 //
 
 import UIKit
-import Firebase
-import FirebaseStorage
-
 
 private let reuseIdentifier = "Cell"
 
-class ClothingListCVC: UICollectionViewController {
+class ClothingCategoryCVC: UICollectionViewController {
     
-    private var user: User!
-    private var ref: DatabaseReference!
-    private var category = [ClothingList]()
+    var currentClothingCategory: ClothingList?
 
-
-//    var menuCategorItems: [ClothingList] = {
-//        var itemMenu = ClothingList()
-//        itemMenu?.title = "Блузки/Рубашки"
-//        itemMenu?.imageName = "👔"
-//        return [itemMenu]
-//    } ()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let currentUser = Auth.auth().currentUser else {
-            return
-        }
-            user = User(user: currentUser)
-            
-            ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("categories")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,27 +23,6 @@ class ClothingListCVC: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // наблюдатель за значениями
-        ref.observe(.value) { [weak self] snapshot in
-            var categories = [ClothingList]()
-            for item in snapshot.children { // вытаскиваем все tasks
-                guard let snapshot = item as? DataSnapshot,
-                      let category = ClothingList(snapshot: snapshot) else { continue }
-                categories.append(category)
-            }
-            self?.category = categories
-            self?.collectionView.reloadData()
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // удаляем всех Observers
-        ref.removeAllObservers()
     }
 
     /*
@@ -85,29 +44,18 @@ class ClothingListCVC: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        category.count
+        // #warning Incomplete implementation, return the number of items
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? ClothingListCVCell {
-            let currentTask = category[indexPath.row]
-            cell.categoryName.text = currentTask.title
-            
-            return cell
-        }
-    // Configure the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        return UICollectionViewCell()
-    }
+        // Configure the cell
     
-    override func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
-        true
+        return cell
     }
 
-
-    
     // MARK: UICollectionViewDelegate
 
     /*

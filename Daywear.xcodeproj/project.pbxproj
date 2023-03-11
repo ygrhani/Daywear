@@ -23,6 +23,7 @@
 		784FCD1F29ACCDDC00E487F9 /* ClothingListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FCD1E29ACCDDC00E487F9 /* ClothingListCVC.swift */; };
 		784FCD2129ACD34D00E487F9 /* ClothingListCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FCD2029ACD34D00E487F9 /* ClothingListCVCell.swift */; };
 		784FCD2329ACD7C100E487F9 /* ClothingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FCD2229ACD7C100E487F9 /* ClothingListModel.swift */; };
+		7885402029BD24720064DAA5 /* ClothingCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7885401F29BD24720064DAA5 /* ClothingCategoryCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		784FCD1E29ACCDDC00E487F9 /* ClothingListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingListCVC.swift; sourceTree = "<group>"; };
 		784FCD2029ACD34D00E487F9 /* ClothingListCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingListCVCell.swift; sourceTree = "<group>"; };
 		784FCD2229ACD7C100E487F9 /* ClothingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingListModel.swift; sourceTree = "<group>"; };
+		7885401F29BD24720064DAA5 /* ClothingCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCategoryCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				781A68CE29930BE8005AF4E1 /* Models */,
+				7885401E29BD24060064DAA5 /* Controllers */,
 				781A68CD29930B09005AF4E1 /* Login screen */,
 				781A68B12992FF5B005AF4E1 /* Main.storyboard */,
 				781A68B42992FF5E005AF4E1 /* Assets.xcassets */,
@@ -84,8 +87,6 @@
 				781A68B92992FF5E005AF4E1 /* Info.plist */,
 				781A68BF2993009E005AF4E1 /* GoogleService-Info.plist */,
 				781A68CC29930ADE005AF4E1 /* AppDelegates */,
-				784FCD1E29ACCDDC00E487F9 /* ClothingListCVC.swift */,
-				784FCD2029ACD34D00E487F9 /* ClothingListCVCell.swift */,
 			);
 			path = Daywear;
 			sourceTree = "<group>";
@@ -122,6 +123,16 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7885401E29BD24060064DAA5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				784FCD2029ACD34D00E487F9 /* ClothingListCVCell.swift */,
+				784FCD1E29ACCDDC00E487F9 /* ClothingListCVC.swift */,
+				7885401F29BD24720064DAA5 /* ClothingCategoryCVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				784FCD2329ACD7C100E487F9 /* ClothingListModel.swift in Sources */,
 				781A68AC2992FF5B005AF4E1 /* AppDelegate.swift in Sources */,
 				781A68D129931329005AF4E1 /* UserModel.swift in Sources */,
+				7885402029BD24720064DAA5 /* ClothingCategoryCVC.swift in Sources */,
 				781A68AE2992FF5B005AF4E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
