@@ -9,13 +9,15 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ClothingCategoryCVC: UICollectionViewController {
+class ClothingCategoryCVC: UICollectionViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var currentClothingCategory: ClothingList?
+    var imagePicker: UIImagePickerController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = currentClothingCategory?.title
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -56,6 +58,41 @@ class ClothingCategoryCVC: UICollectionViewController {
         return cell
     }
 
+    
+    @IBAction func addNewPhoto(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "New photo", message: "Add new photo", preferredStyle: .alert)
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        let takePhoto = UIAlertAction(title: "take a photo", style: .default) { [self] _ in // почему с weak ошибка?
+            
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            
+        present(imagePicker, animated: true, completion: nil)
+            
+            imagePicker.sourceType = .
+        }
+        
+        let choosePhoto = UIAlertAction(title: "choose a photo", style: .default) {_ in
+            
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(takePhoto)
+        alertController.addAction(choosePhoto)
+        alertController.addAction(cancel)
+        present(alertController, animated: true)
+        
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+        //заносим изображение в массив
+    }
     // MARK: UICollectionViewDelegate
 
     /*
