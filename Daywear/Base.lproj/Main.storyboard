@@ -159,8 +159,8 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="170" height="170"/>
                                 <connections>
-                                    <outlet property="categoryImage" destination="Tqh-pm-1KD" id="cq1-u7-i62"/>
-                                    <outlet property="categoryName" destination="anX-km-hZ4" id="WjE-A1-tVa"/>
+                                    <outlet property="categoryImage" destination="Tqh-pm-1KD" id="bF3-YO-LxW"/>
+                                    <outlet property="categoryName" destination="anX-km-hZ4" id="OW4-K2-DDP"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -169,17 +169,26 @@
                             <outlet property="delegate" destination="bTy-Gn-zgD" id="dmE-TJ-0k5"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Categories" id="Q59-cg-773">
+                    <navigationItem key="navigationItem" id="Q59-cg-773">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="door.right.hand.open" catalog="system" id="ytQ-jj-Zc6">
                             <connections>
                                 <action selector="singOutAction:" destination="bTy-Gn-zgD" id="yC1-Co-6Ji"/>
                             </connections>
                         </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="3Cc-Da-Ae6">
+                            <rect key="frame" x="120" y="5.6666666666666679" width="153" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Category"/>
+                                <segment title="OutFits"/>
+                            </segments>
+                        </segmentedControl>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="gearshape" catalog="system" id="qYW-K5-iPH"/>
                             <barButtonItem title="Item" image="plus" catalog="system" id="inP-Nc-5KH">
                                 <connections>
-                                    <action selector="add:" destination="bTy-Gn-zgD" id="SBn-0x-6e9"/>
+                                    <action selector="addNewCategory:" destination="bTy-Gn-zgD" id="LFU-Vs-a5K"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -204,7 +213,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="SIW-H1-7rQ">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="SIW-H1-7rQ" customClass="ClothingCategoryCVCell" customModule="Daywear" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qpe-3C-FKM">
@@ -223,6 +232,9 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="185" height="185"/>
+                                <connections>
+                                    <outlet property="picOfClothes" destination="qdB-pe-6H2" id="X4c-5W-CMZ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

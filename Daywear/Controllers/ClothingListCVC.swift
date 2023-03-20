@@ -10,21 +10,12 @@ import Firebase
 import FirebaseStorage
 
 
-private let reuseIdentifier = "Cell"
-
-class ClothingListCVC: UICollectionViewController {
+final class ClothingListCVC: UICollectionViewController {
     
     private var user: User!
     private var ref: DatabaseReference!
     private var category = [ClothingList]()
-
-
-//    var menuCategorItems: [ClothingList] = {
-//        var itemMenu = ClothingList()
-//        itemMenu?.title = "Блузки/Рубашки"
-//        itemMenu?.imageName = "👔"
-//        return [itemMenu]
-//    } ()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +31,7 @@ class ClothingListCVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
         // Do any additional setup after loading the view.
     }
@@ -50,7 +41,7 @@ class ClothingListCVC: UICollectionViewController {
         // наблюдатель за значениями
         ref.observe(.value) { [weak self] snapshot in
             var categories = [ClothingList]()
-            for item in snapshot.children { // вытаскиваем все tasks
+            for item in snapshot.children { // вытаскиваем все categories
                 guard let snapshot = item as? DataSnapshot,
                       let category = ClothingList(snapshot: snapshot) else { continue }
                 categories.append(category)
@@ -90,15 +81,13 @@ class ClothingListCVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? ClothingListCVCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
             let currentCategory = category[indexPath.row]
-            cell.categoryName.text = currentCategory.title
-            
-            return cell
-        }
+        cell.categoryName.text = currentCategory.title
+        
     // Configure the cell
     
-        return UICollectionViewCell()
+        return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
@@ -109,6 +98,7 @@ class ClothingListCVC: UICollectionViewController {
         guard let categoryItem = storyboard?.instantiateViewController(withIdentifier: "itemList") as? ClothingCategoryCVC else {return}
         let categoryList = category[indexPath.row]
         categoryItem.currentClothingCategory = categoryList
+        categoryItem.user = user
     }
 
 
