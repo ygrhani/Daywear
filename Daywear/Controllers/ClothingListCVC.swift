@@ -16,7 +16,6 @@ final class ClothingListCVC: UICollectionViewController {
     private var ref: DatabaseReference!
     private var category = [ClothingList]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,14 +25,9 @@ final class ClothingListCVC: UICollectionViewController {
             user = User(user: currentUser)
             
             ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("categories")
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-
-        // Do any additional setup after loading the view.
+        
+        collectionView.backgroundColor = #colorLiteral(red: 0.9905706048, green: 0.8760409168, blue: 0.6444740729, alpha: 1)
+        collectionView.tintColor = #colorLiteral(red: 0.4666666667, green: 0.4039215686, blue: 0.7490196078, alpha: 0.71)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,48 +51,49 @@ final class ClothingListCVC: UICollectionViewController {
         ref.removeAllObservers()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         category.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-            let currentCategory = category[indexPath.row]
-        cell.categoryName.text = currentCategory.title
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Categories", for: indexPath) as? ClothingListCVCell else { fatalError("Wrong cell class dequeued")
+        }
         
-    // Configure the cell
+        let currentCategory = category[indexPath.row]
+        cell.nameCategory.text =  currentCategory.title
+        
+        cell.makeCell()
+//        let blur = UIBlurEffect(style: UIBlurEffect.Style.light)
+//        let blurEffect = UIVisualEffectView(effect: blur)
+//        blurEffect.bounds = cell.bounds
+//        blurEffect.frame.origin.x = cell.layer.frame.origin.x
+//        blurEffect.layer.frame.origin.x = cell.layer.frame.origin.x
+//        cell.insertSubview(blurEffect, at: 0)
+        // Configure the cell
     
         return cell
     }
     
+    
     override func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
         true
     }
+    
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let categoryItem = storyboard?.instantiateViewController(withIdentifier: "itemList") as? ClothingCategoryCVC else {return}
         let categoryList = category[indexPath.row]
         categoryItem.currentClothingCategory = categoryList
         categoryItem.user = user
+        navigationController?.pushViewController(categoryItem, animated: true)
+        
+        // if !isEditing {}
+
     }
 
 
@@ -122,7 +117,7 @@ final class ClothingListCVC: UICollectionViewController {
             // добавляем на сервак
             catRef!.setValue(category.convertToDictionary()) // помещаем словарь по ref
         }
-        // action 2
+        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(save)
         alertController.addAction(cancel)
@@ -139,36 +134,27 @@ final class ClothingListCVC: UICollectionViewController {
     }
     
     
+    @IBAction func goToOutfits(_ sender: Any) {
+        
+        guard let outfitsListCVC = storyboard?.instantiateViewController(withIdentifier: "OutfitsList") as? OutfitsListCVC else {return}
+        
+        navigationController?.pushViewController(outfitsListCVC, animated: true)
+        
+    }
+    
+    
+//    override func collectionView(_ collectionView: UICollectionView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        true
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, commit editingStyle: UICollectionViewCell., forRowAt indexPath: IndexPath) {
+//        if editingStyle != .e { return }
+//        let task = tasks[indexPath.row]
+//        // удаление
+//        task.ref?.removeValue()
+//    }
     
     // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }
