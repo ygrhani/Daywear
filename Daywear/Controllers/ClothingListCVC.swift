@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import VegaScrollFlowLayout
 
 
 final class ClothingListCVC: UICollectionViewController {
@@ -28,6 +29,12 @@ final class ClothingListCVC: UICollectionViewController {
         
         collectionView.backgroundColor = #colorLiteral(red: 0.9905706048, green: 0.8760409168, blue: 0.6444740729, alpha: 1)
         collectionView.tintColor = #colorLiteral(red: 0.4666666667, green: 0.4039215686, blue: 0.7490196078, alpha: 0.71)
+        
+        let layout = VegaScrollFlowLayout()
+        collectionView.collectionViewLayout = layout
+        layout.minimumLineSpacing = 20
+        layout.itemSize = CGSize(width: collectionView.frame.width, height: 87)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +93,7 @@ final class ClothingListCVC: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let categoryItem = storyboard?.instantiateViewController(withIdentifier: "itemList") as? ClothingCategoryCVC else {return}
+        guard let categoryItem = storyboard?.instantiateViewController(withIdentifier: "itemList") as? ClothingCategoryVC else {return}
         let categoryList = category[indexPath.row]
         categoryItem.currentClothingCategory = categoryList
         categoryItem.user = user

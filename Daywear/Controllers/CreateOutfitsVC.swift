@@ -48,9 +48,9 @@ class CreateOutfitsVC: UIViewController {
                 
             }
         }
-        
-        // Do any additional setup after loading the view.
     }
+    
+    
     
     @IBAction func addNewItem(_ sender: Any) {
         
@@ -71,7 +71,7 @@ class CreateOutfitsVC: UIViewController {
     
     }
     
-    private func fetchImage(imageURLStr: String, image: UIImageView) {
+  private func fetchImage(imageURLStr: String, image: UIImageView) {
         
         var newURL: String = imageURLStr
         

@@ -4,7 +4,7 @@
 //
 //  Created by Ann Prudnikova on 12.03.23.
 //
-
+/*
 import UIKit
 import PhotosUI
 import Firebase
@@ -79,38 +79,7 @@ final class ClothingCategoryCVC: UICollectionViewController, UINavigationControl
         cell.isEditing = isEditing
         
         fetchImage(imageURLStr: items.itemsCategory!, image: cell.picOfClothes)
-//        if let photos = items.itemsCategory {
-//
-//            var newURL: String = photos
-//
-//            newURL.replace(",", with: ".")
-//            newURL.replace("§", with: "#")
-//            newURL.replace("±", with: "'")
-//
-//            let url = URL(string: newURL)!
-//            let urlRequest = URLRequest(url: url)
-//            let task = URLSession.shared.dataTask(with: urlRequest) { data, reply, error in
-//                DispatchQueue.main.async {
-//                    if let error {
-//                        let errorAlert = UIAlertController(title: "Something's wrong", message: error.localizedDescription, preferredStyle: .alert)
-//                        let okBtn = UIAlertAction(title: "OK", style: .cancel)
-//                        self.present(errorAlert, animated: true)
-//                        errorAlert.addAction(okBtn)
-//                        return
-//                    }
-//
-//                    if let reply {
-//                        print(reply)
-//                    }
-//
-//                    cell.picOfClothes.image = UIImage(data: data!)
-//                }
-//            }
-//            task.resume()
-//
-//        }
-        
-        
+
         return cell
     }
     
@@ -293,9 +262,9 @@ final class ClothingCategoryCVC: UICollectionViewController, UINavigationControl
             let selectedItems = itemsOfCategory[indexPath.row]
              selectedItems.ref?.removeValue()
              
-             let itemRef = refStorage.child("All Items").child(user.uid)
-                 .child("Items Of Category").child((String(currentClothingCategory!.title))).child(selectedItems.itemsCategoryUUID)
-             itemRef.delete { error in
+             refStorage = Storage.storage().reference().child("All Items").child(user.uid).child("Items Of Category").child((String(currentClothingCategory!.title))).child(selectedItems.itemsCategoryUUID)
+             
+             refStorage.delete { error in
                  if let error = error {
                      print(error)
                  } else {
@@ -312,7 +281,7 @@ final class ClothingCategoryCVC: UICollectionViewController, UINavigationControl
             
             let selectedItems = itemsOfCategory[indexPath.row]
 
-            outfitItems.selectedItemForOutfit.selectedItems?.append((String(selectedItems.itemsCategory!))) 
+            outfitItems.selectedItemForOutfit.selectedItems?.append((String(selectedItems.itemsCategory!)))
             
 //            outfitItems.selectedItemsForOutfit.selectedItems.append(cell.picOfClothes.image)
 //            outfitItems.imViewForItems.image = cell.picOfClothes.image
@@ -360,3 +329,4 @@ final class ClothingCategoryCVC: UICollectionViewController, UINavigationControl
     */
 
 }
+*/

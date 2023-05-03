@@ -17,23 +17,27 @@
 		781A68B32992FF5B005AF4E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781A68B12992FF5B005AF4E1 /* Main.storyboard */; };
 		781A68B82992FF5E005AF4E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781A68B62992FF5E005AF4E1 /* LaunchScreen.storyboard */; };
 		781A68D129931329005AF4E1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A68D029931329005AF4E1 /* UserModel.swift */; };
+		78216CC529F7164800541591 /* ClothingCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78216CC429F7164800541591 /* ClothingCategoryVC.swift */; };
 		7829CF2F29DCB562009B28E8 /* CreateOutfitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829CF2E29DCB562009B28E8 /* CreateOutfitsModel.swift */; };
-		78309A8E29D6408000D3D26A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78309A8D29D6408000D3D26A /* FirebaseAnalytics */; };
-		78309A9029D6408000D3D26A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 78309A8F29D6408000D3D26A /* FirebaseAuth */; };
-		78309A9229D6408000D3D26A /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78309A9129D6408000D3D26A /* FirebaseCrashlytics */; };
-		78309A9429D6408000D3D26A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 78309A9329D6408000D3D26A /* FirebaseDatabase */; };
-		78309A9629D6408000D3D26A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 78309A9529D6408000D3D26A /* FirebaseStorage */; };
 		7844F8B529C7EEB7008D30B9 /* ClothingCategoryCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844F8B429C7EEB7008D30B9 /* ClothingCategoryCVCell.swift */; };
+		7846E98F29FDC8450085C65E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7846E98E29FDC8450085C65E /* FirebaseAnalytics */; };
+		7846E99129FDC8450085C65E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7846E99029FDC8450085C65E /* FirebaseAuth */; };
+		7846E99329FDC8450085C65E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7846E99229FDC8450085C65E /* FirebaseCrashlytics */; };
+		7846E99529FDC8450085C65E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7846E99429FDC8450085C65E /* FirebaseDatabase */; };
+		7846E99729FDC8450085C65E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7846E99629FDC8450085C65E /* FirebaseStorage */; };
+		7846E99929FDCC370085C65E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7846E99829FDCC370085C65E /* GoogleService-Info.plist */; };
 		784FCD1F29ACCDDC00E487F9 /* ClothingListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FCD1E29ACCDDC00E487F9 /* ClothingListCVC.swift */; };
 		784FCD2329ACD7C100E487F9 /* ClothingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FCD2229ACD7C100E487F9 /* ClothingListModel.swift */; };
 		7885402029BD24720064DAA5 /* ClothingCategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7885401F29BD24720064DAA5 /* ClothingCategoryCVC.swift */; };
-		788D1B4329D2732100CCBBB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 788D1B4229D2732100CCBBB8 /* GoogleService-Info.plist */; };
 		78B14A8729C9D97D00E5C6FA /* ClothingListCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B14A8629C9D97D00E5C6FA /* ClothingListCVCell.swift */; };
 		78B865DC29BF8C0B00C01B09 /* CategoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B865DB29BF8C0B00C01B09 /* CategoryListModel.swift */; };
 		78C742E529D2D445005AD590 /* Extension + UICVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C742E429D2D445005AD590 /* Extension + UICVCell.swift */; };
+		B3015CDAD07F5390D70DFE26 /* Pods_Daywear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6301014BAB78454A5BBC4133 /* Pods_Daywear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		346AC4B2BE0947D023BE165D /* Pods-Daywear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daywear.release.xcconfig"; path = "Target Support Files/Pods-Daywear/Pods-Daywear.release.xcconfig"; sourceTree = "<group>"; };
+		6301014BAB78454A5BBC4133 /* Pods_Daywear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daywear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780B5F1D29CDC5B800F9C94F /* OutfitsListCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitsListCVCell.swift; sourceTree = "<group>"; };
 		780B5F1F29CDC5DB00F9C94F /* OutfitsListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitsListCVC.swift; sourceTree = "<group>"; };
 		780B5F2129CDC94F00F9C94F /* OutfitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitsModel.swift; sourceTree = "<group>"; };
@@ -46,15 +50,17 @@
 		781A68B72992FF5E005AF4E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		781A68B92992FF5E005AF4E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781A68D029931329005AF4E1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		78216CC429F7164800541591 /* ClothingCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCategoryVC.swift; sourceTree = "<group>"; };
 		7829CF2E29DCB562009B28E8 /* CreateOutfitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOutfitsModel.swift; sourceTree = "<group>"; };
 		7844F8B429C7EEB7008D30B9 /* ClothingCategoryCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCategoryCVCell.swift; sourceTree = "<group>"; };
+		7846E99829FDCC370085C65E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Users/annprudnikova/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		784FCD1E29ACCDDC00E487F9 /* ClothingListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingListCVC.swift; sourceTree = "<group>"; };
 		784FCD2229ACD7C100E487F9 /* ClothingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingListModel.swift; sourceTree = "<group>"; };
 		7885401F29BD24720064DAA5 /* ClothingCategoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCategoryCVC.swift; sourceTree = "<group>"; };
-		788D1B4229D2732100CCBBB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Users/annprudnikova/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78B14A8629C9D97D00E5C6FA /* ClothingListCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingListCVCell.swift; sourceTree = "<group>"; };
 		78B865DB29BF8C0B00C01B09 /* CategoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListModel.swift; sourceTree = "<group>"; };
 		78C742E429D2D445005AD590 /* Extension + UICVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UICVCell.swift"; sourceTree = "<group>"; };
+		FB38FCD9A9F00DA9BD598975 /* Pods-Daywear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daywear.debug.xcconfig"; path = "Target Support Files/Pods-Daywear/Pods-Daywear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,22 +68,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78309A9229D6408000D3D26A /* FirebaseCrashlytics in Frameworks */,
-				78309A8E29D6408000D3D26A /* FirebaseAnalytics in Frameworks */,
-				78309A9429D6408000D3D26A /* FirebaseDatabase in Frameworks */,
-				78309A9629D6408000D3D26A /* FirebaseStorage in Frameworks */,
-				78309A9029D6408000D3D26A /* FirebaseAuth in Frameworks */,
+				7846E99529FDC8450085C65E /* FirebaseDatabase in Frameworks */,
+				7846E98F29FDC8450085C65E /* FirebaseAnalytics in Frameworks */,
+				7846E99329FDC8450085C65E /* FirebaseCrashlytics in Frameworks */,
+				7846E99129FDC8450085C65E /* FirebaseAuth in Frameworks */,
+				B3015CDAD07F5390D70DFE26 /* Pods_Daywear.framework in Frameworks */,
+				7846E99729FDC8450085C65E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1678A3322B05B43B43E8B5DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB38FCD9A9F00DA9BD598975 /* Pods-Daywear.debug.xcconfig */,
+				346AC4B2BE0947D023BE165D /* Pods-Daywear.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		47285B6D5217E788DB071B24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6301014BAB78454A5BBC4133 /* Pods_Daywear.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		781A689F2992FF5B005AF4E1 = {
 			isa = PBXGroup;
 			children = (
 				781A68AA2992FF5B005AF4E1 /* Daywear */,
 				781A68A92992FF5B005AF4E1 /* Products */,
+				1678A3322B05B43B43E8B5DF /* Pods */,
+				47285B6D5217E788DB071B24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +125,7 @@
 				781A68B12992FF5B005AF4E1 /* Main.storyboard */,
 				781A68B62992FF5E005AF4E1 /* LaunchScreen.storyboard */,
 				781A68B92992FF5E005AF4E1 /* Info.plist */,
-				788D1B4229D2732100CCBBB8 /* GoogleService-Info.plist */,
+				7846E99829FDCC370085C65E /* GoogleService-Info.plist */,
 				781A68CC29930ADE005AF4E1 /* AppDelegates */,
 			);
 			path = Daywear;
@@ -152,6 +178,7 @@
 				780B5F1D29CDC5B800F9C94F /* OutfitsListCVCell.swift */,
 				780B5F1F29CDC5DB00F9C94F /* OutfitsListCVC.swift */,
 				780B5F2329CDD8F900F9C94F /* CreateOutfitsVC.swift */,
+				78216CC429F7164800541591 /* ClothingCategoryVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 781A68BC2992FF5E005AF4E1 /* Build configuration list for PBXNativeTarget "Daywear" */;
 			buildPhases = (
+				2A81C3AC04E7B077413E1035 /* [CP] Check Pods Manifest.lock */,
 				781A68A42992FF5B005AF4E1 /* Sources */,
 				781A68A52992FF5B005AF4E1 /* Frameworks */,
 				781A68A62992FF5B005AF4E1 /* Resources */,
+				A5B6878D4D5F59CC3EC7CA89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,11 +210,11 @@
 			);
 			name = Daywear;
 			packageProductDependencies = (
-				78309A8D29D6408000D3D26A /* FirebaseAnalytics */,
-				78309A8F29D6408000D3D26A /* FirebaseAuth */,
-				78309A9129D6408000D3D26A /* FirebaseCrashlytics */,
-				78309A9329D6408000D3D26A /* FirebaseDatabase */,
-				78309A9529D6408000D3D26A /* FirebaseStorage */,
+				7846E98E29FDC8450085C65E /* FirebaseAnalytics */,
+				7846E99029FDC8450085C65E /* FirebaseAuth */,
+				7846E99229FDC8450085C65E /* FirebaseCrashlytics */,
+				7846E99429FDC8450085C65E /* FirebaseDatabase */,
+				7846E99629FDC8450085C65E /* FirebaseStorage */,
 			);
 			productName = Daywear;
 			productReference = 781A68A82992FF5B005AF4E1 /* Daywear.app */;
@@ -216,7 +245,7 @@
 			);
 			mainGroup = 781A689F2992FF5B005AF4E1;
 			packageReferences = (
-				78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 781A68A92992FF5B005AF4E1 /* Products */;
 			projectDirPath = "";
@@ -233,12 +262,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				781A68B82992FF5E005AF4E1 /* LaunchScreen.storyboard in Resources */,
-				788D1B4329D2732100CCBBB8 /* GoogleService-Info.plist in Resources */,
 				781A68B32992FF5B005AF4E1 /* Main.storyboard in Resources */,
+				7846E99929FDCC370085C65E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A81C3AC04E7B077413E1035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daywear-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B6878D4D5F59CC3EC7CA89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daywear/Pods-Daywear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daywear/Pods-Daywear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Daywear/Pods-Daywear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		781A68A42992FF5B005AF4E1 /* Sources */ = {
@@ -259,6 +330,7 @@
 				7885402029BD24720064DAA5 /* ClothingCategoryCVC.swift in Sources */,
 				7844F8B529C7EEB7008D30B9 /* ClothingCategoryCVCell.swift in Sources */,
 				781A68AE2992FF5B005AF4E1 /* SceneDelegate.swift in Sources */,
+				78216CC529F7164800541591 /* ClothingCategoryVC.swift in Sources */,
 				780B5F1E29CDC5B800F9C94F /* OutfitsListCVCell.swift in Sources */,
 				780B5F2429CDD8F900F9C94F /* CreateOutfitsVC.swift in Sources */,
 			);
@@ -402,6 +474,7 @@
 		};
 		781A68BD2992FF5E005AF4E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB38FCD9A9F00DA9BD598975 /* Pods-Daywear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +506,7 @@
 		};
 		781A68BE2992FF5E005AF4E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346AC4B2BE0947D023BE165D /* Pods-Daywear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,40 +560,40 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.7.0;
+				minimumVersion = 10.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		78309A8D29D6408000D3D26A /* FirebaseAnalytics */ = {
+		7846E98E29FDC8450085C65E /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		78309A8F29D6408000D3D26A /* FirebaseAuth */ = {
+		7846E99029FDC8450085C65E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		78309A9129D6408000D3D26A /* FirebaseCrashlytics */ = {
+		7846E99229FDC8450085C65E /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
-		78309A9329D6408000D3D26A /* FirebaseDatabase */ = {
+		7846E99429FDC8450085C65E /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		78309A9529D6408000D3D26A /* FirebaseStorage */ = {
+		7846E99629FDC8450085C65E /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78309A8C29D6408000D3D26A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 7846E98D29FDC8450085C65E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
