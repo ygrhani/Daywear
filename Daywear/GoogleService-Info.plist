@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>393694219477-eiqq209kohrdbikjqktrm49s6fktdgcg.apps.googleusercontent.com</string>
+	<string>918260224461-fo992b8k9d5gv0q6mk4ogfq9530kd40c.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.393694219477-eiqq209kohrdbikjqktrm49s6fktdgcg</string>
+	<string>com.googleusercontent.apps.918260224461-fo992b8k9d5gv0q6mk4ogfq9530kd40c</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBcz-mYX1t6c1OxLLHjtD40m3aa_1O3q5E</string>
+	<string>AIzaSyDv3WOqrpC-etvltjU8Eqwj7QyzHAO5CAY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>393694219477</string>
+	<string>918260224461</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Daywear</string>
+	<string>TMS37.Daywear</string>
 	<key>PROJECT_ID</key>
-	<string>daywear-fa936</string>
+	<string>daywear-58aa8</string>
 	<key>STORAGE_BUCKET</key>
-	<string>daywear-fa936.appspot.com</string>
+	<string>daywear-58aa8.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:393694219477:ios:498257ccc4ffdc1faaa65c</string>
+	<string>1:918260224461:ios:3c746625b89db0c5eef484</string>
 </dict>
 </plist>

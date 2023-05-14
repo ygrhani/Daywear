@@ -53,7 +53,7 @@ final class LoginViewController: UIViewController {
             guard let _ = user else {
                 return
             }
-            guard let tvc = self?.storyboard?.instantiateViewController(withIdentifier: "TasksTVC") as? UINavigationController else {return}
+            guard let tvc = self?.storyboard?.instantiateViewController(withIdentifier: "ClothingListCVC") as? UINavigationController else {return}
             tvc.modalPresentationStyle = .overFullScreen
             self?.present(tvc, animated: false)
         }
@@ -92,7 +92,7 @@ final class LoginViewController: UIViewController {
                 self?.displayWarningLabel(withText: "Error ocured: \(error.localizedDescription)")
             } else if let _ = user {
                 // переходим на новый экран
-                guard let tvc = self?.storyboard?.instantiateViewController(withIdentifier: "TasksTVC") as? UINavigationController else {return}
+                guard let tvc = self?.storyboard?.instantiateViewController(withIdentifier: "ClothingListCVC") as? UINavigationController else {return}
                 tvc.modalPresentationStyle = .overFullScreen
                 self?.present(tvc, animated: true)
                 return
